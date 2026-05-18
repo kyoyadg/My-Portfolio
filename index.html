@@ -283,17 +283,6 @@
       scrollY = window.scrollY;
     });
 
-    // Mouse parallax: track cursor position
-    let mouseX = 0;
-    let mouseY = 0;
-    let targetMouseX = 0;
-    let targetMouseY = 0;
-
-    window.addEventListener('mousemove', (e) => {
-      targetMouseX = (e.clientX / window.innerWidth - 0.5) * 2;
-      targetMouseY = (e.clientY / window.innerHeight - 0.5) * 2;
-    });
-
     window.addEventListener('resize', () => {
       renderer.setSize(window.innerWidth, window.innerHeight);
       camera.aspect = window.innerWidth / window.innerHeight;
@@ -302,15 +291,10 @@
 
     const animate = () => {
       requestAnimationFrame(animate);
-      // Smooth mouse lerp for fluid movement
-      mouseX += (targetMouseX - mouseX) * 0.05;
-      mouseY += (targetMouseY - mouseY) * 0.05;
-
       starMesh.rotation.y += 0.0005;
       starMesh.rotation.x += 0.0002;
       // Parallax tilt based on scroll
-      camera.position.y = -(scrollY * 0.002) + (mouseY * -0.3);
-      camera.position.x = mouseX * 0.3;
+      camera.position.y = -(scrollY * 0.002);
       camera.rotation.z = scrollY * 0.0001;
       renderer.render(scene, camera);
     };
@@ -327,7 +311,11 @@
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
+          if (entry.target.classList.contains('carousel')) {
+            entry.target.style.opacity = '0.8';
+          } else {
+            entry.target.style.opacity = '1';
+          }
           entry.target.style.transform = 'translateY(0)';
         }
       });
