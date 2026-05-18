@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>KEN S2K DGZMN</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Space+Grotesk:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    .navbar-brand {
+      font-family: 'Righteous', cursive;
+      font-weight: 400;
+      letter-spacing: 2px;
+      font-size: 24px;
+    }
+
+    .navbar-nav>li>a {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* Transparent footer with readable white text */
+    footer {
+      background-color: transparent;
+      padding: 25px;
+      color: #fff;
+    }
+  </style>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <canvas id="universe-canvas"></canvas>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">KEN S2K DGZMN</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#HomeSec">Home</a></li>
+          <li><a href="#AboutSec">About</a></li>
+          <li><a href="#ExperienceSec">Experience</a></li>
+          <li><a href="#ContactSec">Contact</a></li>
+        </ul>
+        <!-- <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul> -->
+      </div>
+    </div>
+  </nav>
+
+  <div class="jumbotron" id="HomeSec">
+    <div class="container text-center">
+      <h1>My Portfolio</h1>
+      <p>Hi, I'm Ken! An aspiring software developer transforming curiosity into creative code.<br> Welcome to my
+        digital universe!</p>
+    </div>
+  </div>
+
+  <!-- Carousel -->
+  <div id="demo" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators/dots -->
+    <ol class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ol>
+
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="img/img1.jpg" alt="img1" class="center-block" style="width: 80%; height: 30%">
+      </div>
+      <div class="item">
+        <img src="img/img2.jpg" alt="img2" class="center-block" style="width: 80%; height: 30%">
+      </div>
+      <div class="item">
+        <img src="img/img3.jpg" alt="img3" class="center-block" style="width: 80%; height: 30%">
+      </div>
+    </div>
+
+    <!-- Left and right controls/icons -->
+    <a class="left carousel-control" href="#demo" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#demo" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <!--   <div class="container-fluid mt-3">
+    <h3>Carousel Example</h3>
+    <p>The following example shows how to create a basic carousel with indicators and controls.</p>
+  </div> -->
+
+
+  <!-- <div class="container-fluid bg-3 text-center">    
+  <h3>Here are some of my Works</h3><br> -->
+  <!--  <div class="row">
+    <div class="col-sm-3">
+      <p>Some text..</p>
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3"> 
+      <p>Some text..</p>
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3"> 
+      <p>Some text..</p>
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3">
+      <p>Some text..</p>
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+  </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">    
+  <div class="row">
+    <div class="col-sm-3">
+      <p>Some text..</p>
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3"> 
+      <p>Some text..</p>
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3"> 
+      <p>Some text..</p>
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3">
+      <p>Some text..</p>
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+  </div>
+</div><br><br> -->
+
+  <div class="jumbotron">
+    <div class="container text-center">
+      <h1 id="AboutSec">About</h1>
+      <p>As a passionate coder at the start of my career, I'm eager to build impactful applications, master emerging
+        technologies, and solve complex problems.</p>
+    </div>
+  </div>
+
+  <div class="jumbotron">
+    <div class="container text-center">
+      <h1 id="ExperienceSec">Experience</h1>
+      <p>While I'm just beginning my professional journey, my path is fueled by a relentless drive to learn, create, and
+        collaborate on exciting tech projects.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="container py-5">
+      <div class="main-timeline">
+        <div class="timeline left">
+          <div class="panel panel-default">
+            <div class="panel-body" style="padding: 1.5rem;">
+              <h3>2017</h3>
+              <p class="mb-0">Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto
+                mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua
+                dignissim per, habeo iusto primis ea eam.</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline right">
+          <div class="panel panel-default">
+            <div class="panel-body" style="padding: 1.5rem;">
+              <h3>2016</h3>
+              <p class="mb-0">Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto
+                mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua
+                dignissim per, habeo iusto primis ea eam.</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline left">
+          <div class="panel panel-default">
+            <div class="panel-body" style="padding: 1.5rem;">
+              <h3>2015</h3>
+              <p class="mb-0">Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto
+                mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua
+                dignissim per, habeo iusto primis ea eam.</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline right">
+          <div class="panel panel-default">
+            <div class="panel-body" style="padding: 1.5rem;">
+              <h3>2012</h3>
+              <p class="mb-0">Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto
+                mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua
+                dignissim per, habeo iusto primis ea eam.</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline left">
+          <div class="panel panel-default">
+            <div class="panel-body" style="padding: 1.5rem;">
+              <h3>2011</h3>
+              <p class="mb-0">Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto
+                mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua
+                dignissim per, habeo iusto primis ea eam.</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline right">
+          <div class="panel panel-default">
+            <div class="panel-body" style="padding: 1.5rem;">
+              <h3>2007</h3>
+              <p class="mb-0">Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto
+                mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua
+                dignissim per, habeo iusto primis ea eam.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="jumbotron">
+    <div class="container text-center">
+      <h1 id="ContactSec">Contact</h1>
+      <p>Let's build something amazing together! I'm always open to new opportunities, collaborations, and chatting
+        about all things tech.</p>
+    </div>
+  </div>
+
+  <footer class="container-fluid text-center">
+    <p>&copy; 2026 Kenneth Benedict de Guzman &mdash; Crafted with passion &amp; powered by curiosity.</p>
+    <a href="#" class="jtphref">Jump to Top</a>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script>
+    const canvas = document.getElementById('universe-canvas');
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.z = 5;
+
+    const starsGeometry = new THREE.BufferGeometry();
+    const starsCount = 5000;
+    const posArray = new Float32Array(starsCount * 3);
+    for (let i = 0; i < starsCount * 3; i++) {
+      posArray[i] = (Math.random() - 0.5) * 50;
+    }
+    starsGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+    const starsMaterial = new THREE.PointsMaterial({ size: 0.05, color: 0xffffff });
+    const starMesh = new THREE.Points(starsGeometry, starsMaterial);
+    scene.add(starMesh);
+
+    // Parallax: shift stars based on scroll
+    let scrollY = 0;
+    window.addEventListener('scroll', () => {
+      scrollY = window.scrollY;
+    });
+
+    // Mouse parallax: track cursor position
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetMouseX = 0;
+    let targetMouseY = 0;
+
+    window.addEventListener('mousemove', (e) => {
+      targetMouseX = (e.clientX / window.innerWidth - 0.5) * 2;
+      targetMouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+    });
+
+    window.addEventListener('resize', () => {
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+    });
+
+    const animate = () => {
+      requestAnimationFrame(animate);
+      // Smooth mouse lerp for fluid movement
+      mouseX += (targetMouseX - mouseX) * 0.05;
+      mouseY += (targetMouseY - mouseY) * 0.05;
+
+      starMesh.rotation.y += 0.0005;
+      starMesh.rotation.x += 0.0002;
+      // Parallax tilt based on scroll
+      camera.position.y = -(scrollY * 0.002) + (mouseY * -0.3);
+      camera.position.x = mouseX * 0.3;
+      camera.rotation.z = scrollY * 0.0001;
+      renderer.render(scene, camera);
+    };
+    animate();
+
+    // Fade-in parallax for content sections
+    const sections = document.querySelectorAll('.jumbotron, .carousel, section, footer');
+    sections.forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(40px)';
+      el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(el => observer.observe(el));
+  </script>
+</body>
+
+</html>
