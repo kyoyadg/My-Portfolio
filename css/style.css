@@ -199,3 +199,7 @@ html {
     left: 0%;
   }
 }
+
+#universe-canvas {
+  opacity: 0.65;
+}
